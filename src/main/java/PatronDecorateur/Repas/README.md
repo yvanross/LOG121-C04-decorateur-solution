@@ -4,7 +4,7 @@
 2. Faire un diagramme de séquence de la fonction repasTest() en excluant les assert
 3. Ajouter le détail de l'opération pizza.getCost() du test assertEquals(11,pizza.getCost(),0.001); dans votre diagramme de séquence
 4. Insérer votre diagramme UML dans ce fichier
-5. Générer README.pdf
+
   
 
 
