@@ -13,11 +13,25 @@ skinparam style strictuml
 participant ":RepasTest" as repasTest <<C, xx>>
 participant "repas:Repas" as repas <<IIngredient>>
 participant "pizza:Pizza" as pizza <<IIngredient>>
-
-
+participant "patate:Patate" as patate <<classe>>
+participant "citron[i]:Citron" as citron
 -> repasTest: repasTest()
-repasTest -> pizza**: create(10,"Pizzaxxx")
-repasTest -> repas**: create(10,"Pizzaxxx")
+repasTest --> pizza**: create(10,"Pizzaxxx")
+repasTest --> repas**: create(10,"Pizzaxxx")
+repas -> patate : ajouter x
+
+loop [condition]
+
+repasTest -> citron: getTotal()
+activate citron
+citron -> citron : getCost()
+activate citron
+citron -> banane : getCost()
+deactivate citron
+citron -> orange: getCost()
+deactivate citron
+
+end
 
 
 ```
