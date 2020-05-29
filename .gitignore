@@ -26,7 +26,3 @@ buildNumber.properties
 .classpath
 .project
 .vscode/
-
-# solution à ne pas inclure dans le git
-comparatorNomSalaire.java
-repas.java

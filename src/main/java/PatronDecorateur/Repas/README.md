@@ -2,11 +2,12 @@
 1. Vous devez compléter le/les test(s) dans la classe RepasTest
 1. repas.getCost() doit nécessairement utiliser un Itérateur 
 2. Faire un diagramme de séquence de la fonction repasTest() en excluant les assert
-3. Ajouter le détail de l'opération pizza.getCost() du test assertEquals(11,pizza.getCost(),0.001); dans votre diagramme de séquence
-4. Insérer votre diagramme UML dans ce fichier
+3. Ajouter le détail de l'opération getCost() sur le mozzarella dans votre diagramme de séquence et démontrer la mécanique de décoration.
+4. Ajouter le détail de l'opération repas.getCost() dans votre diagramme de séquence.
+5. Insérer votre diagramme UML dans ce fichier
 
   
-
+Voici un exemple de diagramme de séquence avec plantUML
 
 ```plantuml
 skinparam style strictuml
@@ -24,11 +25,11 @@ loop [condition]
 
 repasTest -> citron: getTotal()
 activate citron
-citron -> citron : getCost()
+citron -> citron : getCostA()
 activate citron
-citron -> banane : getCost()
+citron -> banane : getCostB()
 deactivate citron
-citron -> orange: getCost()
+citron -> orange: getCostC()
 deactivate citron
 
 end
