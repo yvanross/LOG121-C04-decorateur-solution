@@ -8,6 +8,7 @@ public class SimpleCoffee implements IIngredient {
     private String description = "";
 
     public SimpleCoffee(Double cost, String description){
+        System.out.println("Adding Simple coffee at " + cost.toString());
         this.cost = cost;
         this.description = description;
     }

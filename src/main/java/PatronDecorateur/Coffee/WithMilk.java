@@ -4,8 +4,9 @@ import PatronDecorateur.Repas.*;
 // Decorator WithMilk mixes milk into coffee.
 // Note it extends CoffeeDecorator.
 public class WithMilk extends Ingredient {
-    public WithMilk(IIngredient ingredient, double cost, String description) {
+    public WithMilk(IIngredient ingredient, Double cost, String description) {
         super(ingredient,cost,description);
+        System.out.println("Adding milk at " + cost.toString());
     }
 
     @Override

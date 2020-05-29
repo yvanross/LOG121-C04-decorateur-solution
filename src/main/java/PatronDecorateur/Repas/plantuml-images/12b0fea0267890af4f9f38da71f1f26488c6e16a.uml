@@ -1,0 +1,13 @@
+@startuml
+skinparam style strictuml
+participant ":RepasTest" as repasTest <<C, xx>>
+participant "repas:Repas" as repas <<IIngredient>>
+participant "pizza:Pizza" as pizza <<IIngredient>>
+
+
+-> repasTest: repasTest()
+repasTest -> pizza**: create(10,"Pizzaxxx")
+repasTest -> repas**: create(10,"Pizzaxxx")
+
+
+@enduml

@@ -6,7 +6,8 @@ public class Patate implements IIngredient {
   private Double cost = 0.0;
   private String description="";
 
-  public Patate(double cost, String description) {
+  public Patate(Double cost, String description) {
+    System.out.println("Add Patate at " + cost.toString());
     this.cost = cost;
     this.description = description;
   }

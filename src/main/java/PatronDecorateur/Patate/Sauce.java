@@ -5,9 +5,9 @@ import PatronDecorateur.Repas.Ingredient;
 
 public class Sauce extends Ingredient {
 
-  public Sauce(IIngredient ingredient, double cost, String description) {
+  public Sauce(IIngredient ingredient, Double cost, String description) {
     super(ingredient,cost,description);
-    System.out.println("Add sauce");
+    System.out.println("Add sauce at " + cost.toString());
   }
   
 
