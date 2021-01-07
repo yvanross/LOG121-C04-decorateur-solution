@@ -26,3 +26,6 @@ buildNumber.properties
 .classpath
 .project
 .vscode/
+.gradle/
+target/
+build/
