@@ -14,6 +14,9 @@
   
 Voici un exemple de diagramme de séquence avec plantUML
 
+
+![readme](https://www.plantuml.com/plantuml/svg/XPB1JiCm38RlUGghfp5j4boZgHhqjDk4TfjsCAbLXNL9bNYexEb9tK6W0dPnREVxdTzIrf4nyFdKgdYqhiE09uZytbAAmHgvILssndRe60hzJ1t67KKk02E4pmfMgse1VL-MFta1Hb4M97YpSKsWsfBZgQIpbmlgxH158lKD2J8owQqSeqZIf38jnaXJWR4SlDlRWwua4ytOLCiohwLpEhjJUTjbWiJNVAx114flpHxk5uMuxlk-cC9ItO1X63hwre2l_imKe5UgzRw3lV6kjcozEwZliykhRGqDySupjiae6hPlmvphIkEHOH2wyf4V_wLVqA6ZJ3ybkgQ_UH_GDVI5Lx_YYbojrYcap_K1 "readme")
+
 ```plantuml
 skinparam style strictuml
 participant ":RepasTest" as repasTest <<C, xx>>
@@ -38,6 +41,7 @@ citron -> orange: getCostC()
 deactivate citron
 
 end
-
-
 ```
+
+
+
