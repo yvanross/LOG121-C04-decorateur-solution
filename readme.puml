@@ -1,4 +1,42 @@
-@startuml
+@startuml DCL-coffe
+skinparam Style strictuml
+
+Interface Coffee <<Interface>>{
+    getCost(): double
+    getIngredients(): String
+}
+class SimpleCoffe implements Coffee{
+    getCost(): double
+    getIngredients(): String
+}
+
+class CoffeeDecorator <<Abstract>>{
+    getCost(): double
+    getIngredient(): String
+}
+CoffeeDecorator .-up-|> Coffee: implement
+CoffeeDecorator -->  "1" Coffee: Decorate
+
+class WithMilk extends CoffeeDecorator
+class WithSprinkles extends CoffeeDecorator
+@enduml
+
+@startuml DCL-pizza
+title DCL-pizza
+skinparam Style strictuml
+Interface Pizza <<interface>>{
+    getCost(): double
+    getDescription(): String
+}
+class ThreeCheesePizza extends Pizza
+class PlainPizza implements Pizza
+class ToppingDecorator <<abstract>> implements Pizza 
+class Mozzarella extends ToppingDecorator
+class TomatoSauce extends ToppingDecorator
+ToppingDecorator --> Pizza: decorate
+@enduml
+
+@startuml DS-test
 skinparam style strictuml
 participant ":RepasTest" as repasTest <<C, xx>>
 participant "repas:Repas" as repas <<IIngredient>>

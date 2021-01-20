@@ -6,42 +6,34 @@
 # Travail pratique à réaliser
 1. Vous devez compléter le/les test(s) dans la classe RepasTest
 1. repas.getCost() doit nécessairement utiliser un Itérateur 
-2. Faire un diagramme de séquence de la fonction repasTest() en excluant les assert
-3. Ajouter le détail de l'opération getCost() sur le mozzarella dans votre diagramme de séquence et démontrer la mécanique de décoration.
-4. Ajouter le détail de l'opération repas.getCost() dans votre diagramme de séquence.
-5. Insérer votre diagramme UML dans ce fichier
+2. Faire un diagramme de classe
+3. Faire un diagramme de séquence de la fonction repasTest() en excluant les assert
+4. Ajouter le détail de l'opération getCost() sur le mozzarella dans votre diagramme de séquence et démontrer la mécanique de décoration.
+5. Ajouter le détail de l'opération repas.getCost() dans votre diagramme de séquence.
 
   
+# Diagramme de classe
+Créer un seul diagramme de classe englobant toutes les classes de ce projet.
+Votre solution doit respecter les contraintes suivante:
+1. SimpleCoffee peut être décorer seulement par
+   - withMilk
+   - WithSprinkles
+2. Patate peut être décorer seulement par 
+    - Sauce
+    - Poulet (a ajouter)
+3. PlainPizza peut etre décoré seulement par
+    - Mozarrelle
+    - TomatoSauce
+
+Diagramme extrait des projets précédents.... 
+![](out/readme/DCL-coffe.svg)
+![](out/readme/DCL-pizza.svg)
+
+# Diagramme de séquence du test RapasTest.java
 Voici un exemple de diagramme de séquence avec plantUML
 
 
-![readme](https://www.plantuml.com/plantuml/svg/XPB1JiCm38RlUGghfp5j4boZgHhqjDk4TfjsCAbLXNL9bNYexEb9tK6W0dPnREVxdTzIrf4nyFdKgdYqhiE09uZytbAAmHgvILssndRe60hzJ1t67KKk02E4pmfMgse1VL-MFta1Hb4M97YpSKsWsfBZgQIpbmlgxH158lKD2J8owQqSeqZIf38jnaXJWR4SlDlRWwua4ytOLCiohwLpEhjJUTjbWiJNVAx114flpHxk5uMuxlk-cC9ItO1X63hwre2l_imKe5UgzRw3lV6kjcozEwZliykhRGqDySupjiae6hPlmvphIkEHOH2wyf4V_wLVqA6ZJ3ybkgQ_UH_GDVI5Lx_YYbojrYcap_K1 "readme")
-
-```plantuml
-skinparam style strictuml
-participant ":RepasTest" as repasTest <<C, xx>>
-participant "repas:Repas" as repas <<IIngredient>>
-participant "pizza:Pizza" as pizza <<IIngredient>>
-participant "patate:Patate" as patate <<classe>>
-participant "citron[i]:Citron" as citron
--> repasTest: repasTest()
-repasTest --> pizza**: create(10,"Pizzaxxx")
-repasTest --> repas**: create(10,"Pizzaxxx")
-repas -> patate : ajouter x
-
-loop [condition]
-
-repasTest -> citron: getTotal()
-activate citron
-citron -> citron : getCostA()
-activate citron
-citron -> banane : getCostB()
-deactivate citron
-citron -> orange: getCostC()
-deactivate citron
-
-end
-```
+![](out/readme/DS-test.svg)
 
 
-
+Je vous suggère d'éditer les diagrammes dans le fichier README.puml. Utiliser le menu contextuel "Export current file diagrams" qui exportera les fichier svg dans le répertoir out. Vous n'avez qu'a mettre les liens approprié dans ce fichier et vous avez vos diagramme dans votre readme.  Cette méthode facilite grandement la mise à jours des diagrammes et de ce fichier.
