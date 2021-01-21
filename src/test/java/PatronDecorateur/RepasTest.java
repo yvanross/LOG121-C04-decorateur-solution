@@ -1,14 +1,13 @@
-package PatronDecorateur.Pizza;
+package PatronDecorateur;
 
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-import PatronDecorateur.Coffee.SimpleCoffee;
-import PatronDecorateur.Coffee.WithMilk;
-import PatronDecorateur.Patate.Patate;
-import PatronDecorateur.Patate.Sauce;
-import PatronDecorateur.Repas.IIngredient;
-import PatronDecorateur.Repas.Repas;
+import PatronDecorateur.Coffee.*;
+import PatronDecorateur.Patate.*;
+import PatronDecorateur.Repas.*;
+import PatronDecorateur.Pizza.*;
+// import PatronDecorateur.Repas.Repas;
 
 public class RepasTest
  {
