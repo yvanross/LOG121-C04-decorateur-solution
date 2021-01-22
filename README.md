@@ -3,34 +3,24 @@
 
 [Identifidation de l'étudiant](README-identification.md)
 
-# Travail pratique à réaliser
+## Travail pratique à réaliser
 1. Vous devez compléter le/les test(s) dans la classe RepasTest
 1. repas.getCost() doit nécessairement utiliser un Itérateur 
-2. Faire un diagramme de classe
-3. Faire un diagramme de séquence de la fonction repasTest() en excluant les assert
-4. Ajouter le détail de l'opération getCost() sur le mozzarella dans votre diagramme de séquence et démontrer la mécanique de décoration.
-5. Ajouter le détail de l'opération repas.getCost() dans votre diagramme de séquence.
+2. repas.getDescription() doit nécessairement utiliser un Itérateur 
+3. Faire un diagramme de classe
+4. Faire un diagramme de séquence de la fonction repasTest() en excluant les assert
+5. Votre diagramme de séquence doit démontrer l'utilisation de l'itérateur pour l'opération getCost() seulement.
 
   
-# Diagramme de classe
-Créer un seul diagramme de classe englobant toutes les classes de ce projet.
-Votre solution doit respecter les contraintes suivante:
-1. SimpleCoffee peut être décorer seulement par
-   - withMilk
-   - WithSprinkles
-2. Patate peut être décorer seulement par 
-    - Sauce
-    - Poulet (a ajouter)
-3. PlainPizza peut etre décoré seulement par
-    - Mozarrelle
-    - TomatoSauce
+## Diagramme de classe
+Insérer votre diagramme ici
 
 Diagramme extrait des projets précédents.... 
 ![](out/readme/DCL-coffe.svg)
 ![](out/readme/DCL-pizza.svg)
 
-# Diagramme de séquence du test RapasTest.java
-Voici un exemple de diagramme de séquence avec plantUML
+## Diagramme de séquence du test RapasTest.java
+Insérer votre diagramme ici
 
 
 ![](out/readme/DS-test.svg)

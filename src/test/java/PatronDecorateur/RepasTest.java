@@ -3,11 +3,11 @@ package PatronDecorateur;
 import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
-import PatronDecorateur.Coffee.*;
-import PatronDecorateur.Patate.*;
-import PatronDecorateur.Repas.*;
-import PatronDecorateur.Pizza.*;
-// import PatronDecorateur.Repas.Repas;
+
+import Decorateur.Coffee.*;
+import Decorateur.Patate.*;
+import Decorateur.Pizza.*;
+// import Decorateur.Repas.*;
 
 public class RepasTest
  {
@@ -15,35 +15,42 @@ public class RepasTest
     @Test
     public void repasTest(){
       
-        IIngredient pizza = (IIngredient) new ThreeCheesePizza(10.5, "Pizza");
+        IPizza pizza = new ThreeCheesePizza(10.5, "Pizza");
         assertEquals(10.5, pizza.getCost(),0.001);
 
-        pizza = (IIngredient) new Mozzarella(pizza, 0.5, "with Mozzarella");
+        pizza = new Mozzarella(pizza);
         assertEquals(11,pizza.getCost(),0.001);
 
-         IIngredient coffe = (IIngredient) new SimpleCoffee(1.0, "Coffee");
-        assertEquals(1.0,coffe.getCost(),0.001);
-        assertEquals("Coffee",coffe.getDescription());
+        ICoffee coffee =  new SimpleCoffee(1.0, "Coffee");
+        assertEquals(1.0,coffee.getCost(),0.001);
+        assertEquals("Coffee",coffee.getDescription());
 
-        coffe = (IIngredient) new WithMilk(coffe,0.5,"Milk");
-        assertEquals(1.5,coffe.getCost(),0.001);
-        assertEquals("Coffee, Milk",coffe.getDescription());
+        coffee =  new WithMilk(coffee);
+        assertEquals(1.5,coffee.getCost(),0.001);
+        assertEquals("Coffee, with milk",coffee.getDescription());
 
-       IIngredient patate = new Patate(3.55, "Patates du lac St-Jean");
+       IPatate patate = new Patate(3.55, "Patates du lac St-Jean");
        assertEquals(3.55, patate.getCost(),0.001);
        assertEquals("Patates du lac St-Jean", patate.getDescription());
 
-       patate = new Sauce(patate,0.45,"avec sauce brune");
-       assertEquals(4.0, patate.getCost(),0.001);
-       assertEquals("Patates du lac St-Jean, avec sauce brune", patate.getDescription());
+       patate = new Sauce(patate);
+       assertEquals(4.05, patate.getCost(),0.001);
+       assertEquals("Patates du lac St-Jean, sauce", patate.getDescription());
        
-       patate= (IIngredient) new Mozzarella(patate, 1.25, "Fromage en grain");
-       assertEquals(5.25,patate.getCost(),0.001);
+       patate= new Fromage(patate);
+       assertEquals(4.4,patate.getCost(),0.001);
 
-       Repas repas = new Repas();
-       repas.add(pizza);
-       repas.add(coffe);
-       repas.add(patate);
-       assertEquals(17.75,repas.getCost(), 0.001);
+    // Vous devez enlever les commentaire et faire les modifications nécessaires pour faire passer
+    // le code et calculer le cout total du repas.   
+    //    Repas repas = new Repas();
+    //    repas.add(pizza);
+    //    repas.add(coffee);
+    //    repas.add(patate);
+    //    assertEquals(16.9,repas.getCost(), 0.001);
+    //    assertEquals("Pizza, mozzarella\nCoffee, with milk\nPatates du lac St-Jean, sauce, fromage\n", repas.getDescription());
+
+    //    repas.add(new ThreeCheesePizza(3.1, "Small Pizza"));
+    //    assertEquals(20,repas.getCost(), 0.001);
+
     }
 }
