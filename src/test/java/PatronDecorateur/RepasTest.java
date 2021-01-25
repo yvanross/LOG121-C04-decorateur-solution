@@ -40,17 +40,24 @@ public class RepasTest
        patate= new Fromage(patate);
        assertEquals(4.4,patate.getCost(),0.001);
 
-    // Vous devez enlever les commentaire et faire les modifications nécessaires pour faire passer
-    // le code et calculer le cout total du repas.   
+    // Vous devez enlever les commentaires et faire les modifications nécessaires dans le code et dans ce test pour faire passer
+    // celui-ci et calculer le cout total du repas.   
     //    Repas repas = new Repas();
     //    repas.add(pizza);
     //    repas.add(coffee);
     //    repas.add(patate);
-    //    assertEquals(16.9,repas.getCost(), 0.001);
+    //    assertEquals(16.9,repas.getCost(), 0.001);    
     //    assertEquals("Pizza, mozzarella\nCoffee, with milk\nPatates du lac St-Jean, sauce, fromage\n", repas.getDescription());
 
-    //    repas.add(new ThreeCheesePizza(3.1, "Small Pizza"));
-    //    assertEquals(20,repas.getCost(), 0.001);
-
+    //    repas.add(new ThreeCheesePizza(10, "Pizza"));
+    //    repas.add(new SimpleCoffee(1.0, "Coffee"));
+    //    repas.add(new Patate(3, "Patates frites"));
+    //    assertEquals(30.9,repas.getCost(), 0.001);
     }
 }
+
+
+// Assurer vous que le code suivant génère une erreur de compilation. C'est à dire qu'on ne peut pas décorer un item sans l'utilisation de son propre décorateur.
+// IPizza pizza = new ThreeCheesePizza(10.5, "Pizza");
+// IPatate patate = new Sauce(pizza);
+      
