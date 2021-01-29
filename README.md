@@ -17,14 +17,14 @@ celui-ci et calculer le cout total du repas.
 Insérer votre diagramme ici
 
 Diagramme extrait des projets précédents.... 
-![](out/readme/DCL-coffe.svg)
-![](out/readme/DCL-pizza.svg)
+![dcl-coffe](README/DCL-coffe.svg)
+![dcl-pizza](README/DCL-pizza.svg)
 
 ## Diagramme de séquence du test RapasTest.java
 Insérer votre diagramme ici
 
 
-![](out/readme/DS-test.svg)
+![ds-test](README/DS-test.svg)
 
 
 Je vous suggère d'éditer les diagrammes dans le fichier README.puml. Utiliser le menu contextuel "Export current file diagrams" qui exportera les fichier svg dans le répertoir out. Vous n'avez qu'a mettre les liens approprié dans ce fichier et vous avez vos diagramme dans votre readme.  Cette méthode facilite grandement la mise à jours des diagrammes et de ce fichier et permet la visualisation complète du fichier REAME.md sur github à l'aide d'un navigateur.

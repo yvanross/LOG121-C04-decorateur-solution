@@ -10,7 +10,7 @@ reverse link Pizza to PlainPizza--><path d="M203.941,127.9661 C200.235,150.8511 
 reverse link Pizza to ToppingDecorator--><path d="M244.768,125.2741 C250.973,135.3791 257.686,145.6471 264.5,154.9531 C271.969,165.1531 280.957,175.6631 289.24,184.7841 " fill="none" id="Pizza-backto-ToppingDecorator" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="none" points="238.746,128.8421,234.56,108.0701,250.786,121.6971,238.746,128.8421" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[c73d5662bce71abcacb1844ed9ebe464]
 link ToppingDecorator to Pizza--><path codeLine="12" d="M299.002,184.8211 C290.386,170.6971 279.257,153.0961 268.5,137.9531 C262.477,129.4741 255.781,120.6401 249.191,112.2351 " fill="none" id="ToppingDecorator-to-Pizza" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="245.969,108.1461,248.3988,117.6905,249.0642,112.073,254.6818,112.7383,245.969,108.1461" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="57" x="280.5" y="151.02">decorate</text><!--MD5=[eb57874a2f83cc1a580c877905baeae9]
 reverse link ToppingDecorator to Mozzarella--><path d="M290.341,257.1055 C282.209,271.9685 273.553,287.7869 267.032,299.7055 " fill="none" id="ToppingDecorator-backto-Mozzarella" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="284.422,253.3405,300.163,239.1551,296.703,260.0607,284.422,253.3405" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[74f407a7037567f5864ba156b7beda89]
-reverse link ToppingDecorator to TomatoSauce--><path d="M338.242,257.1055 C346.235,271.9685 354.741,287.7869 361.15,299.7055 " fill="none" id="ToppingDecorator-backto-TomatoSauce" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="331.897,260.0854,328.59,239.1551,344.227,253.4549,331.897,260.0854" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[c121841ce082eb558136f256654491e9]
+reverse link ToppingDecorator to TomatoSauce--><path d="M338.242,257.1055 C346.235,271.9685 354.741,287.7869 361.15,299.7055 " fill="none" id="ToppingDecorator-backto-TomatoSauce" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="331.897,260.0854,328.59,239.1551,344.227,253.4549,331.897,260.0854" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[fbe596407843f5d8a7c0c806357bec61]
 @startuml
 title DCL-pizza
 skinparam Style strictuml
@@ -26,7 +26,7 @@ class TomatoSauce extends ToppingDecorator
 ToppingDecorator - -> Pizza: decorate
 @enduml
 
-PlantUML version 1.2021.01beta3(Unknown compile time)
+PlantUML version 1.2021.01beta7(Unknown compile time)
 (GPL source distribution)
 Java Runtime: Java(TM) SE Runtime Environment
 JVM: Java HotSpot(TM) 64-Bit Server VM

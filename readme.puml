@@ -8,6 +8,7 @@ Interface Coffee <<Interface>>{
 class SimpleCoffe implements Coffee{
     getCost(): double
     getIngredients(): String
+    test():void 
 }
 
 class CoffeeDecorator <<Abstract>>{
@@ -20,6 +21,8 @@ CoffeeDecorator -->  "1" Coffee: Decorate
 class WithMilk extends CoffeeDecorator
 class WithSprinkles extends CoffeeDecorator
 @enduml
+
+<\-- ----------------------------------------------------- -->
 
 @startuml DCL-pizza
 title DCL-pizza
@@ -35,6 +38,7 @@ class Mozzarella extends ToppingDecorator
 class TomatoSauce extends ToppingDecorator
 ToppingDecorator --> Pizza: decorate
 @enduml
+<\-- ----------------------------------------------------- -->
 
 @startuml DS-test
 skinparam style strictuml
