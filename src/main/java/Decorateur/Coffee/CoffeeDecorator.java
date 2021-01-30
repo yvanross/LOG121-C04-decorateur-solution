@@ -7,12 +7,12 @@ public abstract class CoffeeDecorator implements ICoffee {
         this.decoratedCoffee = c;
     }
 
-    @Override
+    // @Override
     public Double getCost() { 
         return decoratedCoffee.getCost();
     }
 
-    @Override
+    // @Override
     public String getDescription() {
         return decoratedCoffee.getDescription();
     }

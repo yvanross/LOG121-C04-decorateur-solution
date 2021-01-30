@@ -17,15 +17,14 @@ celui-ci et calculer le cout total du repas.
 Insérer votre diagramme ici
 
 Diagramme extrait des projets précédents.... 
-![dcl-coffe](README/DCL-coffe.svg)
-![dcl-pizza](README/DCL-pizza.svg)
-
+![DCL](src/main/java/Decorateur/Repas/README-generated/Diagramme%20de%20classe.svg)
 ## Diagramme de séquence du test RapasTest.java
 Insérer votre diagramme ici
 
 
-![ds-test](README/DS-test.svg)
+
 
 
 Je vous suggère d'éditer les diagrammes dans le fichier README.puml. Utiliser le menu contextuel "Export current file diagrams" qui exportera les fichier svg dans le répertoir out. Vous n'avez qu'a mettre les liens approprié dans ce fichier et vous avez vos diagramme dans votre readme.  Cette méthode facilite grandement la mise à jours des diagrammes et de ce fichier et permet la visualisation complète du fichier REAME.md sur github à l'aide d'un navigateur.
 
+java -jar plantuml-dependency-cli-1.4.0-jar-with-dependencies.jar -o src/main/java/Decorateur/Repas/README-generated.puml -b . -i **/Decorateur/**/*.java  -v

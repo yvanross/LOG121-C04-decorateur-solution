@@ -8,12 +8,12 @@ public class WithSprinkles extends CoffeeDecorator {
         super(coffee);
     }
 
-    @Override
+    // @Override
     public Double getCost() {
         return super.getCost() + 0.2;
     }
 
-    @Override
+    // @Override
     public String getDescription() {
         return super.getDescription() + ", with sprinkles";
     }

@@ -1,6 +1,6 @@
 package Decorateur.Pizza;
 
-public interface IPizza  {
+public interface IPizza  extends Decorateur.Repas.IRepas {
 	public String getDescription(); 
 	public Double getCost();
 }

@@ -2,7 +2,7 @@ package Decorateur.Coffee;
 
 
 // Extension of a simple coffee without any extra ingredients
-public class SimpleCoffee implements ICoffee {
+public class SimpleCoffee implements ICoffee, Decorateur.Repas.IRepas {
     private Double cost = 0.0;
     private String description = "";
 

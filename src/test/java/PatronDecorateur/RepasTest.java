@@ -7,7 +7,7 @@ import org.junit.Test;
 import Decorateur.Coffee.*;
 import Decorateur.Patate.*;
 import Decorateur.Pizza.*;
-// import Decorateur.Repas.*;
+import Decorateur.Repas.*;
 
 public class RepasTest
  {
@@ -42,17 +42,25 @@ public class RepasTest
 
     // Vous devez enlever les commentaires et faire les modifications nécessaires dans le code et dans ce test pour faire passer
     // celui-ci et calculer le cout total du repas.   
-    //    Repas repas = new Repas();
-    //    repas.add(pizza);
-    //    repas.add(coffee);
-    //    repas.add(patate);
-    //    assertEquals(16.9,repas.getCost(), 0.001);    
-    //    assertEquals("Pizza, mozzarella\nCoffee, with milk\nPatates du lac St-Jean, sauce, fromage\n", repas.getDescription());
+       Repas repas = new Repas();
+       repas.add((IRepas)pizza);
+       repas.add((IRepas)coffee);
+       repas.add((IRepas)patate);
+       assertEquals(16.9,repas.getCost(), 0.001);    
 
-    //    repas.add(new ThreeCheesePizza(10, "Pizza"));
-    //    repas.add(new SimpleCoffee(1.0, "Coffee"));
-    //    repas.add(new Patate(3, "Patates frites"));
-    //    assertEquals(30.9,repas.getCost(), 0.001);
+       String expected = "Pizza, mozzarella\nCoffee, with milk\nPatates du lac St-Jean, sauce, fromage\n";
+
+       System.out.println("expected=" + expected);
+    System.out.println("----");
+       System.out.println("received=" + repas.getDescription());
+       System.out.println("----");
+       assertEquals(expected, repas.getDescription());
+    
+
+       repas.add((IRepas) new ThreeCheesePizza(10.0, "Pizza"));
+       repas.add((IRepas) new SimpleCoffee(1.0, "Coffee"));
+       repas.add((IRepas) new Patate(3.0, "Patates frites"));
+       assertEquals(30.9,repas.getCost(), 0.001);
     }
 }
 
