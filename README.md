@@ -19,7 +19,9 @@ Insérer votre diagramme ici
 Diagramme extrait des projets précédents.... 
 ![DCL](src/main/java/Decorateur/Repas/README-generated/Diagramme%20de%20classe.svg)
 ## Diagramme de séquence du test RapasTest.java
-Insérer votre diagramme ici
+
+![initialisation](README/DS-initialisation.svg)
+![getCost](README/DS-getCost.svg)
 
 
 

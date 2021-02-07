@@ -17,10 +17,22 @@ class Decorateur.Repas.Repas
 class java.util.ArrayList
 class java.util.Iterator
 class java.util.List
-interface Decorateur.Coffee.ICoffee
-interface Decorateur.Patate.IPatate
-interface Decorateur.Pizza.IPizza
-interface Decorateur.Repas.IRepas
+interface Decorateur.Coffee.ICoffee{
+    getCost(): Double
+    getDescription(): Double
+}
+interface Decorateur.Patate.IPatate{
+    getCost(): Double
+    getDescription(): Double
+}
+interface Decorateur.Pizza.IPizza{
+    getCost(): Double
+    getDescription(): Double
+}
+interface Decorateur.Repas.IRepas{
+    getCost(): Double
+    getDescription(): Double
+}
 Decorateur.Coffee.CoffeeDecorator --|> Decorateur.Coffee.ICoffee
 Decorateur.Coffee.SimpleCoffee --|> Decorateur.Coffee.ICoffee
 Decorateur.Coffee.SimpleCoffee --|> Decorateur.Repas.IRepas
@@ -44,4 +56,8 @@ Decorateur.Patate.IPatate --|> Decorateur.Repas.IRepas
 Decorateur.Pizza.IPizza --|> Decorateur.Repas.IRepas
 
 Decorateur.Repas.Repas -u-> "*" Decorateur.Repas.IRepas
+Decorateur.Coffee.CoffeeDecorator --> Decorateur.Coffee.ICoffee
+Decorateur.Patate.PatateDecorator --> Decorateur.Patate.IPatate
+Decorateur.Pizza.PizzaDecorator --> Decorateur.Pizza.IPizza
+
 @enduml

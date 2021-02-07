@@ -1,26 +1,76 @@
-
-@startuml DS-test
+@startuml DS-initialisation
 skinparam style strictuml
-participant ":RepasTest" as repasTest <<C, xx>>
-participant "repas:Repas" as repas <<IIngredient>>
-participant "pizza:Pizza" as pizza <<IIngredient>>
-participant "patate:Patate" as patate <<classe>>
-participant "citron[i]:Citron" as citron
--> repasTest: repasTest()
-repasTest --> pizza**: create(10,"Pizzaxxx")
-repasTest --> repas**: create(10,"Pizzaxxx")
-repas -> patate : ajouter x
+title Création des instance concrètes et des décorateurs
+participant ":RepasTest" as rt 
+participant "pizza:ThreeCheesePizza" as pizza
+participant "pizza2:Mozzarella(pizza:IPizza)" as pizza2
+participant "coffee:SimpleCoffee(cost:Double, description:String)" as coffee
+participant "coffee2:WithMilk(coffee:ICoffe)" as coffee2
+participant "patate:Patate(cost:Double,description:String)" as patate
+participant "patate2:Sauce(patate:Ipatate)" as patate2
+participant "patate3:Fromage(patate2:IPatate)" as patate3
+participant "pizzaR:ThreeCheesePizza(cost:Double, description:String)" as pizzaR
+participant "coffeeR:SimpleCoffee(cost:Double, description:String)" as coffeeR
+participant "patateR:Patate(cost:Double, description:String)" as patateR
+participant "repas:Repas" as repas
+participant ":ArrayList<IRepas>" as lr
+       
+rt-->pizza**:create(cost:Double, description:String)
+rt-->pizza2**:create(pizza:IPizza)
+rt-->coffee**:create(cost:Double, description:String)
+rt-->coffee2**:create(coffee:ICoffee)
+rt-->patate**:create(cost:Double, description:String)
+rt-->patate2**:create(patate:Ipatate)
+rt-->patate3**:create(patate2:IPatate)
+rt-->pizzaR**:create(cost:Double, description:String)
+rt-->coffeeR**:create(cost:Double, description:String)
+rt-->patateR**:create(cost:Double, description:String)
+              
+rt-->repas**:create
+repas --> lr**:create() 
+rt --> repas: add((IRepas)pizza2)
+rt --> repas: add((IRepas)coffee2)
+rt --> repas:add((IRepas)patate3)
+rt --> repas:add((IRepas) pizzaR);
+rt --> repas:add((IRepas) coffeR);
+rt --> repas:add((IRepas) patateR);
 
-loop [condition]
 
-repasTest -> citron: getTotal()
-activate citron
-citron -> citron : getCostA()
-activate citron
-citron -> banane : getCostB()
-deactivate citron
-citron -> orange: getCostC()
-deactivate citron
+@enduml
+
+
+@startuml DS-getCost
+title getCost()
+skinparam style strictuml
+participant ":RepasTest" as rt 
+'participant "pizza:ThreeCheesePizza" as pizza
+'participant "pizza2:Mozzarella(pizza:IPizza)" as pizza2
+'participant "coffee:SimpleCoffee(cost:Double, description:String)" as coffee
+'participant "coffee2:WithMilk(coffee:ICoffe)" as coffee2
+participant "patate:Patate(cost:Double,description:String)" as patate
+participant "patate2:Sauce(patate:Ipatate)" as patate2
+participant "patate3:Fromage(patate2:IPatate)" as patate3
+'participant "pizzaR:ThreeCheesePizza(cost:Double, description:String)" as pizzaR
+'participant "coffeeR:SimpleCoffee(cost:Double, description:String)" as coffeeR
+'participant "patateR:Patate(cost:Double, description:String)" as patateR
+participant "repas:Repas" as repas
+participant ":Iterator<IRepas>" as it      
+
+rt-->repas:getCost():Double
+repas --> it**:create() 
+repas -> it: hasNext:Boolean = hasNext(): Boolean
+loop [hasNext]
+note right of repas: opération polymorphe
+repas -> it: next():IRepas
+note over repas,it: on répète pour tout les décorateurs\n et classes concrètes ajoutées dans la liste\nidem pour getDescription
+note right of patate3: decorateur
+repas -> patate3: cost = cost + getCost():Double
+note right of patate2: decorateur
+patate3 -> patate2: cost = cost + getCost():Double
+note right of patate: Classe concrète
+patate2 -> patate: cost = getCost():Double
+repas -> it: hasNext = hasNext()
+
 
 end
 @enduml
