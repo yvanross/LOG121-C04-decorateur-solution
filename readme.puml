@@ -60,10 +60,11 @@ rt-->repas:getCost():Double
 repas --> it**:create() 
 repas -> it: hasNext:Boolean = hasNext(): Boolean
 loop [hasNext]
-note right of repas: opération polymorphe
+note right of repas: permet de récupérer les instances de pizza, Coffee et Patate
 repas -> it: next():IRepas
+
 note over repas,it: on répète pour tout les décorateurs\n et classes concrètes ajoutées dans la liste\nidem pour getDescription
-note right of patate3: decorateur
+note right of patate3: opération polymorphe, decorateur
 repas -> patate3: cost = cost + getCost():Double
 note right of patate2: decorateur
 patate3 -> patate2: cost = cost + getCost():Double
