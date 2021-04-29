@@ -6,8 +6,6 @@
 Veuillez éditer ce fichier et mettre l'information à jours.
 
 Assurez vous d'utiliser toujours le même compte github pour accéder à ce projet.
-
-
 ## Membre #1
 - <nomComplet1>Entrer votre nom</nomComplet1>
 - <courriel1>Entrer votre courriel</courriel1>
