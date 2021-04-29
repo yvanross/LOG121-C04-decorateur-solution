@@ -10,7 +10,7 @@ public class IdentificationTest {
 	@Test
 	public void nomComplet1Test() {
         try{
-            File file = new File("./README-identification.md");
+            File file = new File("./README.md");
             FileInputStream fis = new FileInputStream(file);
             byte[] data = new byte[(int) file.length()];
             fis.read(data);
